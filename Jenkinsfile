@@ -19,7 +19,7 @@ stage ('uploadartifactsintonexus'){
 sh "$mavenhome/bin/mvn deploy"
 }
 //Deploy app into tomcat server
-stage ('Deployappinto tomcat')
+  stage ('Deployappinto tomcat'){
 sshagent(['48a7e6eb-8db2-40d3-92b5-b08a655491a9']) {
 sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@18.191.255.83:/opt/apache-tomcat-9.0.59/webapps"
 }
