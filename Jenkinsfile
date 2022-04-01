@@ -1,4 +1,6 @@
 node{
+  buildName 'Dev-${BUILD_NUMBER}'
+  buildDescription 'pipeline script'
 def mavenhome = tool name: "maven 3.8.5"
 //checkout stage
 stage('checkout stage'){
